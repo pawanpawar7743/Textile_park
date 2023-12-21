@@ -1,0 +1,12 @@
+<!-- production_management/templates/production_management/work_order_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Work Order List</h2>
+  <ul>
+    {% for work_order in work_orders %}
+      <li>{{ work_order.product.name }} - {{ work_order.quantity }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
